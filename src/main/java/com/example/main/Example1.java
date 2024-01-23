@@ -60,5 +60,6 @@ public class Example1 {
 			System.out.println("Audi was created");
 		}
 		System.out.println("added second line the right one");
+		System.out.println("added third line the right one");
 	}
 }
