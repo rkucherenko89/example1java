@@ -59,7 +59,6 @@ public class Example1 {
 		} else if (audiVehicle != null) {
 			System.out.println("Audi was created");
 		}
-
-		System.out.println("New line from the second commit to delete");
+		System.out.println("added second line the right one");
 	}
 }
