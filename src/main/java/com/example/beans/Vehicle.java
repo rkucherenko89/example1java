@@ -1,10 +1,5 @@
 package com.example.beans;
 
-import jakarta.annotation.PostConstruct;
-import jakarta.annotation.PreDestroy;
-import org.springframework.stereotype.Component;
-
-
 public class Vehicle {
 	private String name;
 
@@ -14,9 +9,5 @@ public class Vehicle {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String sayHello() {
-		return "Hello from Spring context vehicle";
 	}
 }
