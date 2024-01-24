@@ -8,5 +8,6 @@ public class Example1 {
 		var context = new ClassPathXmlApplicationContext("beans.xml");
 		Vehicle vehicle = context.getBean(Vehicle.class);
 		System.out.printf("Vehicle name is %s%n", vehicle.getName());
+		System.out.printf("Vehicle name is %s%n", vehicle.getName());
 	}
 }
