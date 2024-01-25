@@ -14,5 +14,6 @@ public class Example1 {
 		System.out.printf("Vehicle name is %s%n", vehicle.getName());
 		System.out.printf("Person name is %s%n", person.getName());
 		System.out.printf("%s's vehicle name is %s%n", person.getName(), person.getVehicle().getName());
+		context.close();
  	}
 }
