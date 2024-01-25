@@ -8,6 +8,7 @@ public class Person {
 	private String name = "Lucy";
 	private final Vehicle vehicle;
 
+	@Autowired
 	public Person(Vehicle vehicle) {
 		System.out.println("The Person has been created");
 		this.vehicle = vehicle;
