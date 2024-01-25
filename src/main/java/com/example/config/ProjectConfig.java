@@ -10,15 +10,15 @@ public class ProjectConfig {
 	@Bean
 	public Vehicle vehicle() {
 		Vehicle vehicle = new Vehicle();
-		vehicle.setName("Honda");
+		vehicle.setName("Toyota");
 		return vehicle;
 	}
 
 	@Bean
-	public Person person() {
+	public Person person(Vehicle vehicle) {
 		Person person = new Person();
 		person.setName("Hanzo");
-		person.setVehicle(vehicle());
+		person.setVehicle(vehicle);
 		return person;
 	}
 }
