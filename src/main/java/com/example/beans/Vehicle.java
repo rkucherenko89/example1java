@@ -8,7 +8,6 @@ public class Vehicle {
 
 	public Vehicle() {
 		System.out.println("The Vehicle has been created");
-
 	}
 
 	public String getName() {
