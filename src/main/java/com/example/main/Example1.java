@@ -11,7 +11,7 @@ public class Example1 {
 		Person person = context.getBean(Person.class);
 		Vehicle vehicle = context.getBean(Vehicle.class);
 
-		System.out.printf("Vehicle name is %s%n", vehicle.getName());
+		System.out.printf("Vehicle is %s%n", vehicle.getName());
 		System.out.printf("Person name is %s%n", person.getName());
 		System.out.printf("%s's vehicle name is %s%n", person.getName(), person.getVehicle().getName());
  	}
