@@ -19,6 +19,6 @@ public class Vehicle {
 	}
 
 	public void sayHello() {
-		System.out.println("Hello from Component Vehicle Bean");
+		System.out.println("Hello from Component Vehicle Bea");
 	}
 }
