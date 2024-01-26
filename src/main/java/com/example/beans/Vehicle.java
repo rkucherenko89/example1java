@@ -3,9 +3,12 @@ package com.example.beans;
 
 import com.example.services.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("vehicleBean")
+@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class Vehicle {
 	private String name = "Toyota";
 	private final VehicleService service;
