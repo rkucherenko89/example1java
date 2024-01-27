@@ -3,13 +3,14 @@ package com.example.services;
 import com.example.interfaces.Speakers;
 import com.example.interfaces.Tyres;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-@Component("service")
-@Scope(BeanDefinition.SCOPE_SINGLETON)
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+@Component()
 public class VehicleService {
+	private Logger logger = Logger.getLogger(VehicleService.class.getName());
 	@Autowired
 	private Speakers speakers;
 	private Tyres tyres;
@@ -31,8 +32,14 @@ public class VehicleService {
 		this.tyres = tyres;
 	}
 
-	public void playMusic() {
-		System.out.println(speakers.makeSound());
+	public String playMusic(boolean vehicleStarted) {
+		if (vehicleStarted) {
+			String music = speakers.makeSound();
+			return music;
+		} else {
+			logger.log(Level.SEVERE, "Vehicle is not started");
+			return null;
+		}
 	}
 
 	public void moveVehicle() {
