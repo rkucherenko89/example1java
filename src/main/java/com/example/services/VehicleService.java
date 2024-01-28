@@ -1,5 +1,6 @@
 package com.example.services;
 
+import com.example.interfaces.LogAspect;
 import com.example.interfaces.Speakers;
 import com.example.interfaces.Tyres;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,14 +33,9 @@ public class VehicleService {
 		this.tyres = tyres;
 	}
 
+	@LogAspect
 	public String playMusic(boolean vehicleStarted) {
-		if (vehicleStarted) {
-			String music = speakers.makeSound();
-			return music;
-		} else {
-			logger.log(Level.SEVERE, "Vehicle is not started");
-			return null;
-		}
+		return speakers.makeSound();
 	}
 
 	public void moveVehicle() {
